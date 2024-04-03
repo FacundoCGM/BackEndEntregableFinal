@@ -1,0 +1,111 @@
+components:
+  parameters:
+    schemas:
+      BodyProducts:
+        type: object
+        required:
+          - status
+          - title
+          - description
+          - price
+          - thumbnails
+          - code
+          - stock
+          - category
+        properties:
+          status:
+            type: boolean
+            description: Stauts del producto
+          title:
+            type: string
+            description: Titulo del producto
+          description:
+            type: string
+            description: Descripción del producto
+          price:
+            type: number
+            description: Precio del producto
+          thumbnails:
+            type: string
+            description: Thumbnail del producto
+          code:
+            type: number
+            description: Código del producto
+          stock:
+            type: number
+            description: Cantidad de stock del producto
+          category:
+            type: string
+            description: Categoría del producto
+        example:
+          status: true
+          title: zapatillas
+          description: zapatillas verdes
+          price: 250
+          thumbnail: img1
+          code: AxZ019
+          stock: 25
+          category: calzado
+      BodyCart:
+        type: object
+        required:
+          - product
+          - quantity
+        properties:
+          product:
+            type: string
+            description: Id del producto
+          quantity:
+            type: number
+            description: Cantidad del producto
+        example:
+          product: '65690233f473735379bfcfc4'
+          quantity: 2
+      BodyUser:
+        required:
+          - first_name
+          - last_name
+          - email
+          - age
+          - password
+        properties:
+          first_name:
+            type: string 
+            descrption: Nombre del usuario
+          last_name:
+            type: string 
+            descrption: Apellido del usuario
+          email:
+            type: string 
+            descrption: Email del usuario
+          age:
+            type: number 
+            descrption: Edad del usuario
+          password:
+            type: string 
+            descrption: Contraseña del usuario
+          role:
+            type: string 
+            descrption: Rol del usuario
+        example:
+          first_name: Juan
+          last_name: Juanez
+          email: juan1@gmail.com
+          password: "1234"
+          age: 23
+          role: premium
+      BodyLogin:
+        required:
+          - email
+          - password
+        properties:
+          email:
+            type: string 
+            descrption: Email del usuario
+          password:
+            type: string 
+            descrption: Contraseña del usuario
+        example:
+          email: juan1@gmail.com
+          password: "1234"
+          
